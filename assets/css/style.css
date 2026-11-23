@@ -1,3 +1,6 @@
+
+/* Hero & products: full-width content */
+.hero > .wrap, .products > .wrap { width: 100%; }
 /* ENMARS — estilos del sitio */
 :root {
   --navy: #0a1927;
