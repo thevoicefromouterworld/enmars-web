@@ -1,0 +1,54 @@
+# Descarga única de las imágenes originales desde el CDN de Squarespace
+# y las sube al repo (assets/img). Se lanza sola en el primer push y
+# también se puede lanzar a mano desde la pestaña Actions.
+name: Fetch images from Squarespace
+
+on:
+  push:
+    paths: [".github/workflows/fetch-images.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download images
+        run: |
+          set -e
+          B="https://images.squarespace-cdn.com/content/v1/6986707cd6203a143dcf1436"
+          mkdir -p assets/img
+          get() { curl -fsSL -H "Accept: image/jpeg,image/png,*/*;q=0.1" "$B/$2" -o "assets/img/$1"; file "assets/img/$1"; }
+          get logo.jpg              "9aeadc94-10a0-4fba-9cd0-ad0a9f94b433/logo+enmars.JPG?format=750w"
+          get hero-home.jpg         "50e3fe57-cc3d-4ae9-b183-090554e0c640/Sin+t%C3%ADtulo-1.jpg?format=2500w"
+          get hero-products.jpg     "5f5bcc29-1eaa-4a1a-b11d-a55eb7b049b7/Sin+t%C3%ADtulo-3.jpg?format=2500w"
+          get blueprint.jpg         "ac9f7b98-d80f-4f44-acb5-aa986d182414/blueprint2.jpg?format=1500w"
+          get sol-vials.png         "df30d525-f8c4-4327-8ebc-8cf600eb4729/ChatGPT+Image+Feb+17%2C+2026+at+10_03_40+PM.png?format=1000w"
+          get sol-discovery.png     "12ca7a55-788c-4b90-beff-7f6b99b281ee/ChatGPT+Image+Feb+17%2C+2026+at+10_04_57+PM.png?format=1000w"
+          get sol-custom.png        "e1682a28-15a9-45be-98e2-3324e56770b1/ChatGPT+Image+Feb+17%2C+2026+at+10_06_56+PM.png?format=1000w"
+          get proc-briefing.png     "fa254706-fd31-4843-a4dc-3f2b88d489ef/ChatGPT_Image_Feb_16__2026_at_11_15_06_PM-removebg-preview.png"
+          get proc-sourcing.png     "99c6823e-c2b8-4ef1-831a-530f92f03c94/ChatGPT_Image_Feb_16__2026_at_11_20_52_PM-removebg-preview.png"
+          get proc-components.png   "8b07ccb5-86f7-4c11-9c8d-c66d1fe2f0d6/ChatGPT_Image_Feb_16__2026_at_11_20_54_PM-removebg-preview.png"
+          get proc-filling.png      "607b2748-5c2c-4066-9b4e-eec45bb24d77/ChatGPT_Image_Feb_16__2026_at_11_20_55_PM-removebg-preview.png"
+          get proc-wrapping.png     "2a9e1c23-c487-434b-ba89-576254996fb4/ChatGPT_Image_Feb_16__2026_at_11_21_03_PM-removebg-preview.png"
+          get proc-quality.png      "a0d6fb1a-b223-47a0-9571-70e3e1fd1d5d/ChatGPT_Image_Feb_16__2026_at_11_28_32_PM-removebg-preview.png"
+          get sus-coordination.png  "492ff7e3-34aa-4ffd-b497-9bf4335daa97/Feb+17%2C+2026+at+09_31_27+PM.png?format=1000w"
+          get sus-european.png      "e10799ae-f8e7-46a4-b255-6e352a682ca9/ChatGPT+Image+Feb+17%2C+2026+at+10_41_42+PM.png?format=1000w"
+          get sus-quality.png       "b9e3176c-5103-4d03-9c68-0e7772b4cec0/ChatGPT+Image+Feb+17%2C+2026+at+09_44_07+PM.png?format=1000w"
+          get cert-iso22716.png     "7a72d2ec-d376-4d00-8882-9f7de9163631/iso-22716.png?format=500w"
+          get cert-iso9001.png      "ef91d020-c889-40eb-a327-f6493eff47ce/iso-9001.png?format=500w"
+          get cert-iso14001.png     "41cd5177-44e0-4585-93fd-d5e033811f24/iso14001.png?format=500w"
+          get cert-reach.png        "a245de9f-ff83-4298-b2f2-1d00d01ec74b/REACH-Compliance-square.png?format=500w"
+          get cert-gmp.png          "0d1ab92c-cd32-41f5-8544-a7d800c52f5d/GMP-Logo-PNG-Download-Image.png?format=500w"
+          get contact-building.png  "04dd41ef-4efb-4f97-b91d-5acb11a9c734/ChatGPT_Image_Feb_17__2026_at_10_37_56_PM-removebg-preview.png?format=1000w"
+          ls -la assets/img
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898237+github-actions[bot]@users.noreply.github.com"
+          git add assets/img
+          git diff --cached --quiet || git commit -m "Add images migrated from Squarespace"
+          git push
