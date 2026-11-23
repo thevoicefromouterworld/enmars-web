@@ -1,143 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ENMARS</title>
-  <meta name="description" content="ENMARS — precision manufacturing for perfumery sampling. Fully assembled perfume vials, discovery sets and custom sampling projects from a specialised European network.">
-  <meta property="og:title" content="ENMARS">
-  <meta property="og:description" content="ENMARS — precision manufacturing for perfumery sampling. Fully assembled perfume vials, discovery sets and custom sampling projects from a specialised European network.">
-  <meta property="og:image" content="https://enmars.eu/assets/img/hero-home.jpg">
-  <link rel="icon" href="/assets/img/logo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENMARS · Muestras de perfumería: producción y supply chain</title>
+<meta name="description" content="ENMARS produce viales de perfume de 1,5 a 10 ml, discovery sets y proyectos a medida, y planifica la cadena de suministro de tus muestras para que lleguen a tiempo a cada punto de venta.">
+<link rel="canonical" href="https://enmars.eu/">
+<link rel="alternate" hreflang="es" href="https://enmars.eu/">
+<link rel="alternate" hreflang="en" href="https://enmars.eu/en/">
+<link rel="alternate" hreflang="x-default" href="https://enmars.eu/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ENMARS · Muestras de perfumería: producción y supply chain">
+<meta property="og:description" content="ENMARS produce viales de perfume de 1,5 a 10 ml, discovery sets y proyectos a medida, y planifica la cadena de suministro de tus muestras para que lleguen a tiempo a cada punto de venta.">
+<meta property="og:url" content="https://enmars.eu/">
+<meta property="og:image" content="https://enmars.eu/assets/img/hero-home.jpg">
+<meta name="theme-color" content="#050d16">
+<link rel="icon" href="/assets/img/logo.jpg">
+<script>try{if(!localStorage.getItem("enmars-lang")&&!/^(es|ca|gl|eu)/i.test(navigator.language||""))location.replace("/en/"+location.hash)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/v2.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="/" aria-label="ENMARS home"><img src="/assets/img/logo.jpg" alt="ENMARS"></a>
-      <button class="menu-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-      <nav class="nav">
-        <a href="/solutions/">Solutions</a>
-        <a href="/our-industries/">Industries</a>
-        <a href="/production-process/">Production Process</a>
-        <a href="/sustainability/">Sustainability</a>
-        <a href="/contact/">Contact</a>
-      </nav>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ENMARS"><img src="/assets/img/logo-white.png" alt="ENMARS"></a>
+    <nav class="links">
+      <a href="#services">Qué hacemos</a>
+      <a href="#chain">Supply chain</a>
+      <a href="#process">Cómo trabajamos</a>
+      <a href="#who">Para quién</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language"><a href="/" data-setlang="es" hreflang="es" aria-current="true">ES</a><a href="/en/" data-setlang="en" hreflang="en">EN</a></div>
+    <a class="btn btn-primary" href="#quote">Pide presupuesto</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap content">
+    <p class="eyebrow mono">Muestras de perfumería · producción y supply chain</p>
+    <h1>Muestras que <em>llegan a tiempo</em>. Y que salen a cuenta.</h1>
+    <p class="sub">Viales premium de 1,5 a 10 ml, discovery sets y proyectos a medida, con tiradas flexibles. Te asesoramos en el diseño, planificamos la producción según tu demanda y te decimos cómo distribuirla: a qué tiendas, en qué mercados y en qué momento.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#quote">Pide presupuesto</a>
+      <a class="btn btn-ghost" href="#services">Ver qué hacemos</a>
     </div>
-  </header>
+    <div class="chips">
+      <span class="chip mono">1,5 – 10 ml</span>
+      <span class="chip mono">Tiradas flexibles</span>
+      <span class="chip mono">Planificación de demanda</span>
+      <span class="chip mono">Un solo interlocutor</span>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section class="hero dark bg-img" style="background-image:url('/assets/img/hero-home.jpg')">
-      <div class="wrap"><div class="text">
-        <h1>Precision Manufacturing for Perfumery Sampling</h1>
-        <p>ENMARS is a specialized European supplier that delivers fully assembled perfume vials and other formats of sampling - from component sourcing to final packaging, with industrial precision and scalable consistency.</p>
-        <p>In each step of the production process, our goal is to provide our partners with full visibility, production consistency, structured execution and an efficient supply chain.</p>
-      </div></div>
-    </section>
+<section class="sec navy problem" id="problem">
+  <div class="wrap">
+    <p class="label mono rv"><b>01</b><span>El problema</span></p>
+    <h2 class="h2 rv">Producir muestras es fácil. Que salgan rentables y lleguen a tiempo, no.</h2>
+    <div class="grid rv">
+      <div class="cell"><span class="mono" style="color:var(--mist)">Tiradas pequeñas</span><h3>El coste por vial se dispara</h3><p>Producir justo lo que necesitas cada vez sale caro y obliga a repetir el proceso una y otra vez.</p></div>
+      <div class="cell"><span class="mono" style="color:var(--mist)">Tiradas grandes</span><h3>El stock se queda parado</h3><p>Para bajar el coste se produce de golpe, y el almacén se llena de muestras durante meses.</p></div>
+      <div class="cell"><span class="mono" style="color:var(--mist)">Plazos</span><h3>Llegan tarde a donde importan</h3><p>La producción rara vez coincide con lanzamientos, regalos con compra y reposiciones en tienda.</p></div>
+    </div>
+    <p class="close rv">En ENMARS tratamos coste y suministro como un solo problema. Y lo resolvemos contigo.</p>
+  </div>
+</section>
 
-    <section class="products bg-img" style="background-image:url('/assets/img/hero-products.jpg')">
-      <div class="wrap" style="width:100%"><div class="text">
-        <h2>Product Solutions for Perfumery and Cosmetics</h2>
-        <p class="justify">ENMARS delivers <strong>the best product solutions designed to elevate sampling programs across the perfumery and cosmetics industry</strong>. We work closely with brands, manufacturers and retail partners to transform ideas into refined, production-ready formats — combining premium presentation with industrial precision. From core vial programs to tailored projects, <strong>our goal is to provide partners with reliable, scalable solutions</strong> that support growth, enhance brand perception and bring exceptional sampling experiences to market.</p>
-      </div></div>
-    </section>
+<svg class="limb" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--navy)"><path d="M0 70 C 300 6, 900 6, 1200 70 L1200 70 L0 70Z" fill="#f3f5f8" stroke="none"></path></svg>
 
-    <section class="section dark values">
-      <div class="wrap grid">
-        <div><h1>Our Value Proposition</h1></div>
-        <div>
-          <h3>End-to-End</h3>
-          <p><strong>We take full ownership</strong> of the production workflow — from supplier alignment and component sourcing to final assembly and delivery — simplifying complex sampling programs through a single, structured coordination layer.</p>
-        </div>
-        <div>
-          <h3>Industrial Precision</h3>
-          <p>Our leadership team, built on <strong>more than a decade of experience within the luxury fragrance industry</strong>, including leadership roles in production and operations, applies industrial-grade standards to ensure consistency, scalability and premium results.</p>
-        </div>
-        <div>
-          <h3>Excellent Customer Service</h3>
-          <p><strong>We mean it - we believe responsiveness and clarity are part of operational excellence</strong>. Our team works closely with every partner, ensuring transparent communication, proactive problem-solving and reliable execution at every stage.</p>
-        </div>
-      </div>
-    </section>
+<section class="sec light services" id="services">
+  <div class="wrap">
+    <p class="label mono rv"><b>02</b><span>Qué hacemos</span></p>
+    <h2 class="h2 rv">Cuatro capas. Un solo partner.</h2>
+    <p class="lead rv">Contrata solo lo que necesites o déjanos todo el ciclo, desde la idea del formato hasta que la muestra está en el mostrador.</p>
+    <div class="list">
+      <article class="svc rv"><span class="num">01 / 04</span><div><p class="kicker">Producción</p><h3>Viales de calidad, con flexibilidad real</h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><rect x="20" y="4" width="14" height="8" rx="2" fill="#0a1927"/><rect x="18" y="12" width="18" height="38" rx="5" fill="none" stroke="#0a1927" stroke-width="1.6"/><rect x="20.5" y="26" width="13" height="21.5" rx="3.5" fill="#0a1927" opacity=".85"/></svg></div><p>Viales de vidrio de 1,5 a 10 ml (otros formatos bajo pedido), llenado, montaje, etiquetado y discovery sets con su estuche. Tiradas que se adaptan a tu ritmo, no al revés.</p></article>
+      <article class="svc rv"><span class="num">02 / 04</span><div><p class="kicker">Diseño y preparación</p><h3>Del concepto al lote listo para producir</h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="14" width="42" height="30" rx="3" fill="none" stroke="#0a1927" stroke-width="1.6"/><path d="M6 22h42" stroke="#0a1927" stroke-width="1.6"/><rect x="13" y="27" width="5" height="13" rx="1.5" fill="#0a1927"/><rect x="21" y="27" width="5" height="13" rx="1.5" fill="#0a1927" opacity=".7"/><rect x="29" y="27" width="5" height="13" rx="1.5" fill="#0a1927" opacity=".5"/><rect x="37" y="27" width="5" height="13" rx="1.5" fill="#0a1927" opacity=".3"/></svg></div><p>Te asesoramos en formato, materiales, acabados y packaging, y lo preparamos todo para producir sin sorpresas: especificaciones, componentes y calendario.</p></article>
+      <article class="svc rv"><span class="num">03 / 04</span><div><p class="kicker">Cadena de suministro</p><h3>Planificada según tu demanda</h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="7" fill="#0a1927"/><ellipse cx="27" cy="27" rx="23" ry="10" fill="none" stroke="#0a1927" stroke-width="1.4" transform="rotate(-18 27 27)"/><circle cx="48" cy="20" r="3" fill="#0a1927"/><circle cx="7" cy="34" r="3" fill="#0a1927" opacity=".5"/></svg></div><p>Organizamos las tiradas según tus lanzamientos, regalos con compra, e-commerce, retail y reposiciones. Consolidamos lotes para bajar el coste sin sobrestock y repartimos las entregas entre almacenes, distribuidores y tiendas.</p></article>
+      <article class="svc rv"><span class="num">04 / 04</span><div><p class="kicker">Distribución y producto</p><h3>Dónde, cuándo y cuánto</h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><circle cx="10" cy="27" r="5" fill="#0a1927"/><circle cx="44" cy="10" r="4" fill="none" stroke="#0a1927" stroke-width="1.6"/><circle cx="44" cy="27" r="4" fill="none" stroke="#0a1927" stroke-width="1.6"/><circle cx="44" cy="44" r="4" fill="none" stroke="#0a1927" stroke-width="1.6"/><path d="M15 27 C 28 27, 28 10, 40 10 M15 27 H40 M15 27 C 28 27, 28 44, 40 44" fill="none" stroke="#0a1927" stroke-width="1.4"/></svg></div><p>Te decimos cómo distribuir tus muestras: a qué tiendas y mercados, en qué cantidades y en qué momento, para que cada una trabaje para vender. Y si hace falta, te asesoramos también sobre el propio producto.</p></article>
+    </div>
+  </div>
+</section>
 
-    <section class="section light whatwedo">
-      <div class="wrap grid">
-        <div>
-          <h2>What We Do</h2>
-          <p>For all of our creations, we take care of the <strong>finishing</strong> of the glass, the <strong>assembly</strong>, <strong>filling</strong> and <strong>production</strong> of vials and <strong>labelling and final wrapping</strong> of the retail products.</p>
-          <a class="btn" href="/solutions/">More Information<br>About Solutions</a>
-        </div>
-        <img src="/assets/img/blueprint.jpg" alt="Technical drawing of perfume vials and bottle" loading="lazy">
-      </div>
-    </section>
+<svg class="limb" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--moon)"><path d="M0 70 C 300 6, 900 6, 1200 70Z" fill="#0a1927"></path></svg>
 
-    <section class="section light" style="padding-top:0">
-      <div class="wrap">
-        <h2 style="color:var(--navy)">OUR INDUSTRIES</h2>
-        <div class="accordion">
-          <details class="acc-item" open>
-            <summary>Luxury &amp; Niche Fragrance</summary>
-            <div class="acc-body">We support premium fragrance brands requiring precise, scalable vial production for discovery sets, launches and structured sampling programs — ensuring consistency aligned with luxury positioning.</div>
-          </details>
-          <details class="acc-item">
-            <summary>Contract Manufacturing</summary>
-            <div class="acc-body">ENMARS acts as a coordination layer for manufacturers and laboratories seeking reliable partners for vial assembly, handling and finishing processes across a specialized European network.</div>
-          </details>
-          <details class="acc-item">
-            <summary>Retail &amp; Promotional Sampling</summary>
-            <div class="acc-body">We enable agencies and brands to execute large-scale sampling initiatives with structured workflows, industrial precision and dependable delivery timelines.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark mission" style="padding-bottom:160px">
-      <div class="wrap grid">
-        <h2>ENMARS: Our Mission</h2>
-        <h2 class="statement">We want to <span class="hl-circle">redefine</span> how perfume sampling is produced, by bringing structure, transparency and industrial precision to a sector with a historically fragmented supply chain. By acting as a <span class="hl-under">single coordinator layer</span> we will ensure that our partners understand where their project stands, what comes next and how their brands are protected. Our commitment is to <span class="hl-under">elevate</span> industry standards.</h2>
-      </div>
-    </section>
-
-    <section class="section light contact-block angled" id="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <h1>Contact Us</h1>
-          <p class="justify" style="max-width:360px">Provide a brief overview of your project. Share your production objectives, volumes and timelines. ENMARS will help you structure a coordinated solution tailored to your brand needs.</p>
-        </div>
-        <form class="form" action="https://formsubmit.co/rokas@enmars.eu" method="POST">
-          <input type="hidden" name="_cc" value="lucas@enmars.eu">
-          <input type="hidden" name="_subject" value="New enquiry from enmars.eu">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://enmars.eu/thanks/">
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-          <div class="legend">Name</div>
-          <div class="row">
-            <div class="field"><label for="fname">First name </label><input id="fname" name="First name" type="text" autocomplete="given-name"></div>
-            <div class="field"><label for="lname">Last name </label><input id="lname" name="Last name" type="text" autocomplete="family-name"></div>
-          </div>
-          <div class="field"><label for="email">E-mail <span class="req">(required)</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="message">Message <span class="req">(required)</span></label><textarea id="message" name="Message" required></textarea></div>
-          <button class="btn" type="submit">Send</button>
-          <div class="form-status" role="status"></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="brand">ENMARS</div>
+<section class="sec navy chain" id="chain">
+  <div class="wrap">
+    <div class="top">
       <div>
-        <h4>Contact</h4>
-        <a href="mailto:info@enmars.eu">info@enmars.eu</a>
-        <a href="tel:+34611413084">+34 611 413 084</a>
+        <p class="label mono rv"><b>03</b><span>Supply chain</span></p>
+        <h2 class="h2 rv">Producimos al ritmo de tu calendario, no de golpe.</h2>
       </div>
+      <p class="lead rv">Agrupamos la demanda de varios meses en tiradas consolidadas y escalonamos las entregas. Mejor coste por vial, sin meses de stock parado, y cada muestra en su sitio cuando hace falta.</p>
     </div>
-  </footer>
-  <script src="/assets/js/main.js"></script>
+    <div class="chart rv" role="img" aria-label="Ejemplo ilustrativo: demanda mensual de muestras por canal y tres tiradas consolidadas a lo largo del año.">
+      <div class="legend mono" id="legend"></div>
+      <div class="bars" id="bars"></div>
+      <div class="months mono" id="months"></div>
+      <div class="batches" id="batches"></div>
+      <p class="note">Ejemplo ilustrativo. Tu plan se calcula con tus volúmenes y fechas reales.</p>
+    </div>
+    <div class="dests"><span class="chip mono">Tu almacén</span><span class="chip mono">Distribuidores</span><span class="chip mono">Perfumerías nicho</span><span class="chip mono">Grandes almacenes</span><span class="chip mono">E-commerce</span><span class="chip mono">Ferias y eventos</span></div>
+  </div>
+</section>
+
+<svg class="limb" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--navy)"><path d="M0 70 C 300 6, 900 6, 1200 70Z" fill="#f3f5f8"></path></svg>
+
+<section class="sec light" id="process">
+  <div class="wrap">
+    <p class="label mono rv"><b>04</b><span>Cómo trabajamos</span></p>
+    <h2 class="h2 rv">De tu brief a la reposición, sin perder el control.</h2>
+    <div class="steps rv">
+      <div class="step"><div class="dot">1</div><h3>Brief</h3><p>Nos cuentas el formato (ml), las unidades por referencia y la fecha objetivo. Con eso basta para empezar.</p></div>
+      <div class="step"><div class="dot">2</div><h3>Plan y presupuesto</h3><p>Te proponemos tiradas, calendario y coste por unidad, comparando opciones de lote y acabado.</p></div>
+      <div class="step"><div class="dot">3</div><h3>Producción</h3><p>Componentes, llenado, montaje y control de calidad en cada lote, con visibilidad en cada etapa.</p></div>
+      <div class="step"><div class="dot">4</div><h3>Entrega y reposición</h3><p>Entregas repartidas donde se venden tus muestras, y reposiciones planificadas antes de que falten.</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="limb" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--moon)"><path d="M0 70 C 300 6, 900 6, 1200 70Z" fill="#0a1927"></path></svg>
+
+<section class="sec navy who" id="who">
+  <div class="wrap">
+    <p class="label mono rv"><b>05</b><span>Para quién</span></p>
+    <h2 class="h2 rv">Para marcas que quieren que su muestra venda.</h2>
+    <div class="cards">
+      <article class="card rv"><h3>Perfumería nicho y de lujo</h3><p>Discovery sets, ediciones especiales y viales de lanzamiento con el nivel de acabado que exige tu posicionamiento.</p><span class="mono">Discovery sets · Lanzamientos</span></article>
+      <article class="card rv"><h3>Fabricantes y laboratorios</h3><p>Nos integramos en tu producción como capa de coordinación para viales, llenado y montaje, sin añadir complejidad.</p><span class="mono">Llenado · Montaje</span></article>
+      <article class="card rv"><h3>Retail y agencias de sampling</h3><p>Campañas a gran escala con flujos estructurados, entregas fiables y presentación cuidada en cada punto de venta.</p><span class="mono">Campañas · Puntos de venta</span></article>
+    </div>
+  </div>
+</section>
+
+<svg class="limb" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true" style="background:var(--navy)"><path d="M0 70 C 300 6, 900 6, 1200 70Z" fill="#f3f5f8"></path></svg>
+
+<section class="sec light why" id="why">
+  <div class="wrap">
+    <div>
+      <p class="label mono rv"><b>06</b><span>Por qué ENMARS</span></p>
+      <blockquote class="rv">Más de una década en perfumería de lujo, producción y dirección de operaciones. Hablamos el idioma de tu equipo de producto y el de tu almacén.</blockquote>
+    </div>
+    <ul class="rv">
+      <li><b>Un solo interlocutor</b><span>Componentes, llenado, montaje y entregas coordinados desde un mismo sitio.</span></li>
+      <li><b>Visibilidad en cada etapa</b><span>Sabes dónde está tu proyecto, qué viene después y cuándo llega.</span></li>
+      <li><b>Planificación, no solo fabricación</b><span>Pensamos tus tiradas como lo haría tu director de operaciones.</span></li>
+      <li><b>Red europea de proveedores</b><span>Socios seleccionados por fiabilidad, cercanía y estándares industriales.</span></li>
+    </ul>
+    <div class="certs rv">
+      <p class="label mono">Certificaciones</p>
+      <div class="logos"><img src="/assets/img/cert-iso22716.png" alt="ISO 22716 GMP cosmetics" loading="lazy"><img src="/assets/img/cert-iso9001.png" alt="ISO 9001:2015" loading="lazy"><img src="/assets/img/cert-iso14001.png" alt="ISO 14001" loading="lazy"><img src="/assets/img/cert-reach.png" alt="REACH compliance" loading="lazy"><img src="/assets/img/cert-gmp.png" alt="GMP" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec navy cta" id="quote">
+  <canvas id="sky2" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <p class="label mono"><b>07</b><span>Presupuesto</span></p>
+      <h2 class="h2">Cuéntanos tu próxima tirada.</h2>
+      <p class="lead">Con el formato, las unidades por referencia y la fecha te enviamos un presupuesto. Si encaja, lo comentamos en una llamada corta.</p>
+      <p class="lead mono" style="font-size:13px;margin-top:40px">info@enmars.eu<br>+34 611 413 084 · +34 617 106 080</p>
+    </div>
+    <form id="qform" action="https://formsubmit.co/rokas@enmars.eu" method="POST">
+      <input type="hidden" name="_cc" value="lucas@enmars.eu">
+      <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto · enmars.eu">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row2">
+        <label for="f-name"><span>Nombre</span><input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-brand"><span>Marca</span><input id="f-brand" name="brand" autocomplete="organization"></label>
+      </div>
+      <label for="f-email"><span>Email profesional</span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+      <div class="row3">
+        <label for="f-ml"><span>Formato</span>
+          <select id="f-ml" name="format"><option>1,5 ml</option><option selected>2 ml</option><option>3 ml</option><option>5 ml</option><option>10 ml</option><option>Otro</option></select>
+        </label>
+        <label for="f-units"><span>Unidades por referencia</span><input id="f-units" name="units" inputmode="numeric" placeholder="5.000"></label>
+        <label for="f-date"><span>Fecha objetivo</span><input id="f-date" name="date" type="month"></label>
+      </div>
+      <label for="f-msg"><span>Cuéntanos algo más (opcional)</span><textarea id="f-msg" name="message" placeholder="Nº de fragancias, discovery set, canales de venta…"></textarea></label>
+      <button class="btn btn-primary" type="submit" style="justify-self:start">Pedir presupuesto</button>
+      <p class="ok" id="ok" role="status"></p>
+      <p class="formnote">Respondemos en menos de 24 h. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/img/logo-white.png" alt="ENMARS">
+    <span>Producción y supply chain de muestras de perfumería</span>
+    <span>info@enmars.eu · +34 611 413 084 · +34 617 106 080</span>
+  </div>
+</footer>
+
+
+<script>window.ENMARS_I18N = {"legend": ["Lanzamientos", "Regalo con compra", "E-commerce", "Retail y reposición"], "months": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"], "batch": "Tirada", "sending": "Enviando…", "sent": "¡Gracias! Hemos recibido tu solicitud y te responderemos en menos de 24 h.", "failed": "No se ha podido enviar. Escríbenos a <a href=\"mailto:info@enmars.eu\">info@enmars.eu</a>."};</script>
+<script src="/assets/js/v2.js"></script>
 </body>
 </html>
