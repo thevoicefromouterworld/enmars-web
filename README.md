@@ -22,9 +22,9 @@ Header and footer are repeated in every page: if you change the menu or the cont
 
 ## Contact form
 
-The forms post to [FormSubmit](https://formsubmit.co) → emails arrive at **info@enmars.eu**. No backend or account needed.
-The very first submission triggers an activation email to info@enmars.eu — click the link in it once and the form is live.
-To change the recipient, replace `info@enmars.eu` in the `action` of the `<form>` in `index.html` and `contact/index.html`.
+The forms post to [FormSubmit](https://formsubmit.co) → emails arrive at **rokas@enmars.eu**, with **lucas@enmars.eu** in copy (`_cc` hidden field). No backend or account needed.
+The very first submission triggers an activation email to rokas@enmars.eu — click the link in it once and the form is live.
+To change recipients, edit the `action` of the `<form>` (main recipient) and the `_cc` field (copies, comma-separated) in `index.html` and `contact/index.html`.
 
 ## Editing
 
