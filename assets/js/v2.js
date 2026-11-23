@@ -29,21 +29,29 @@ const nav = document.getElementById("nav");
 addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 40), { passive: true });
 
 /* ---------- formulario de presupuesto (FormSubmit) ---------- */
+// 1) Intenta enviar por AJAX (sin salir de la página). 2) Si tarda o falla, envía el formulario
+// de forma normal: FormSubmit procesa el envío y vuelve a la web con ?sent=1 (campo _next).
 const form = document.getElementById("qform");
+const ok = document.getElementById("ok");
+if (/[?&]sent=1/.test(location.search)) { ok.style.display = "block"; ok.textContent = I.sent; }
 form.addEventListener("submit", async e => {
   e.preventDefault();
-  const ok = document.getElementById("ok"), btn = form.querySelector("button[type=submit]");
+  const btn = form.querySelector("button[type=submit]");
   if (form.querySelector("[name=_honey]").value) return;
   if (!form.checkValidity()) { form.reportValidity(); return; }
   btn.disabled = true; ok.style.display = "block"; ok.textContent = I.sending;
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 12000);
   try {
-    const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
+    const body = JSON.stringify(Object.fromEntries(new FormData(form)));
+    const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+      method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body, signal: ctl.signal });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok || String(data.success) === "false") throw new Error(data.message || "error");
-    form.reset(); ok.textContent = I.sent;
+    if (!res.ok || String(data.success) !== "true") throw new Error(data.message || "error");
+    clearTimeout(timer); form.reset(); ok.textContent = I.sent; btn.disabled = false;
   } catch (err) {
-    ok.innerHTML = I.failed;
-  } finally { btn.disabled = false; }
+    clearTimeout(timer);
+    HTMLFormElement.prototype.submit.call(form); // envío normal como respaldo
+  }
 });
 
 /* ---------- cielo: estrellas + limbo del planeta (la barra de la A) ---------- */
